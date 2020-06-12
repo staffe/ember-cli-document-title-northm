@@ -78,7 +78,7 @@
 
             // Stubbable fn that sets document.title
             router.setTitle(finalTitle);
-            if (document) {
+            if (!(fastboot && fastboot.isFastBoot)) {
               document.title = finalTitle;
             }
           });
