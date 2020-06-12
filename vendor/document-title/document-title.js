@@ -78,6 +78,9 @@
 
             // Stubbable fn that sets document.title
             router.setTitle(finalTitle);
+            if (document) {
+              document.title = finalTitle;
+            }
           });
 
         // Tell FastBoot about our async code
